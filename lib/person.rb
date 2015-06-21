@@ -55,16 +55,17 @@ class Person
   end
 
   def start_conversation(friend, topic)
-    if topic == "politics"
+    case topic 
+    when "politics"
       self.happiness -=2
       friend.happiness -= 2
       "blah blah partisan blah lobbyist"
-    elsif topic == "weather"
+    when "weather"
       self.happiness +=1
       friend.happiness += 1
       "blah blah sun blah rain"
     else 
       "blah blah blah blah blah"
-    end # end if
+    end # end case
   end # end start_conversation
 end # end class
